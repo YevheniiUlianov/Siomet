@@ -29,27 +29,27 @@ import { cn } from "@/lib/utils";
 const features = [
   {
     number: "01",
-    title: "Stateful agent runs",
-    description: "Schedule recurring agents with persistent memory, tool access, and context across separate execution runs.",
-    stats: { value: "99.7%", label: "successful runs" },
+    title: "Zustandsbezogene Agentenläufe",
+    description: "Planen Sie wiederkehrende Agenten mit dauerhaftem Gedächtnis, Tool-Zugriff und Kontext über separate Ausführungen hinweg.",
+    stats: { value: "99,7%", label: "erfolgreiche Läufe" },
   },
   {
     number: "02",
-    title: "Event-driven wakeups",
-    description: "Wake agents instantly from webhooks, file uploads, or database changes without polling or brittle scripts.",
-    stats: { value: "50+", label: "trigger sources" },
+    title: "Ereignisgesteuerte Weckungen",
+    description: "Wecken Sie Agenten sofort über Webhooks, Dateiuploads oder Datenbankänderungen – ohne Polling oder fragile Skripte.",
+    stats: { value: "50+", label: "Trigger-Quellen" },
   },
   {
     number: "03",
-    title: "Adaptive scheduling",
-    description: "Let agents assess their output, set the next wake-up time, and keep recurring work on track automatically.",
-    stats: { value: "15m", label: "strict timeout" },
+    title: "Adaptive Planung",
+    description: "Lassen Sie Agenten ihre Ergebnisse bewerten, die nächste Weckzeit festlegen und wiederkehrende Aufgaben automatisch im Blick behalten.",
+    stats: { value: "15 Min", label: "strikte Zeitgrenze" },
   },
   {
     number: "04",
-    title: "Guarded autonomy",
-    description: "Budget caps, execution logs, and strict timeouts keep autonomous work safe, governed, and observable.",
-    stats: { value: "0", label: "runaway costs" },
+    title: "Gesicherte Autonomie",
+    description: "Budgetlimits, Protokolle und strikte Zeitfenster halten autonomes Arbeiten sicher, kontrollierbar und nachvollziehbar.",
+    stats: { value: "0", label: "laufende Kosten" },
   },
 ];
 
@@ -150,22 +150,22 @@ export function AgentScheduleGantt() {
 }
 
 const insightTotals = [
-  { label: "Agent tasks completed", value: "3,389" },
-  { label: "Agent tasks in progress", value: "1,128" },
-  { label: "Agent tasks in review", value: "729" },
+  { label: "Abgeschlossene Agentenaufgaben", value: "3.389" },
+  { label: "Laufende Agentenaufgaben", value: "1.128" },
+  { label: "Agentenaufgaben in Prüfung", value: "729" },
 ];
 
 const insightProjects = [
-  { name: "Daily intelligence", tasks: "239", qronos: "81", codex: "76", copilot: "82", icon: BubbleChatSpark01Icon },
-  { name: "Lead response", tasks: "181", qronos: "25", codex: "151", copilot: "5", icon: Activity03Icon },
-  { name: "Customer health", tasks: "95", qronos: "22", codex: "44", copilot: "29", icon: Activity02Icon },
-  { name: "Support queue", tasks: "88", qronos: "0", codex: "12", copilot: "76", icon: InboxIcon },
-  { name: "Research agents", tasks: "72", qronos: "59", codex: "13", copilot: "0", icon: AiSearch02Icon },
-  { name: "Invoice follow-up", tasks: "51", qronos: "0", codex: "51", copilot: "0", icon: TimelineIcon },
-  { name: "Memory maintenance", tasks: "50", qronos: "3", codex: "0", copilot: "47", icon: SecurityValidationIcon },
-  { name: "Outbound follow-up", tasks: "45", qronos: "18", codex: "21", copilot: "6", icon: BubbleChatSpark01Icon },
-  { name: "Pipeline review", tasks: "43", qronos: "12", codex: "24", copilot: "7", icon: Activity03Icon },
-  { name: "Revenue operations", tasks: "38", qronos: "14", codex: "8", copilot: "16", icon: CursorRectangleSelection02Icon },
+  { name: "Tägliche Intelligenz", tasks: "239", qronos: "81", codex: "76", copilot: "82", icon: BubbleChatSpark01Icon },
+  { name: "Lead-Antwort", tasks: "181", qronos: "25", codex: "151", copilot: "5", icon: Activity03Icon },
+  { name: "Kundenstatus", tasks: "95", qronos: "22", codex: "44", copilot: "29", icon: Activity02Icon },
+  { name: "Support-Warteschlange", tasks: "88", qronos: "0", codex: "12", copilot: "76", icon: InboxIcon },
+  { name: "Forschungsagenten", tasks: "72", qronos: "59", codex: "13", copilot: "0", icon: AiSearch02Icon },
+  { name: "Rechnungsnachverfolgung", tasks: "51", qronos: "0", codex: "51", copilot: "0", icon: TimelineIcon },
+  { name: "Speicherpflege", tasks: "50", qronos: "3", codex: "0", copilot: "47", icon: SecurityValidationIcon },
+  { name: "Outbound-Nachverfolgung", tasks: "45", qronos: "18", codex: "21", copilot: "6", icon: BubbleChatSpark01Icon },
+  { name: "Pipeline-Review", tasks: "43", qronos: "12", codex: "24", copilot: "7", icon: Activity03Icon },
+  { name: "Revenue-Operations", tasks: "38", qronos: "14", codex: "8", copilot: "16", icon: CursorRectangleSelection02Icon },
 ];
 
 function AgentInsightsDashboard() {
@@ -189,7 +189,7 @@ function AgentInsightsDashboard() {
   return (
     <section aria-label="Agent insights dashboard" className="flex h-full min-h-0 flex-col overflow-hidden rounded-lg border border-white/[0.08] bg-[#101112] text-white/75 shadow-[inset_0_1px_0_rgba(255,255,255,0.025)]">
       <header className="flex h-11 shrink-0 items-center gap-2 border-b border-white/[0.06] px-5 text-sm">
-        <span className="font-medium text-white/90">Agent insights</span>
+        <span className="font-medium text-white/90">Agentenübersicht</span>
         <span className="text-amber-300">★</span>
         <span className="text-white/35">•••</span>
       </header>
@@ -205,16 +205,16 @@ function AgentInsightsDashboard() {
           ))}
           <div className="flex min-w-0 items-center border-l border-white/[0.07] pl-3 lg:pl-4">
             <div className="min-w-0 flex-1">
-              <div className="flex items-center justify-between gap-2"><p className="text-[10px] text-white/45 lg:text-xs">Daily budget</p><span className="flex items-center gap-1 text-[9px] text-emerald-300/75"><span className="size-1.5 rounded-full bg-emerald-300 animate-pulse" />Live</span></div>
-              <p className="mt-1 text-lg font-light tracking-tight text-white lg:text-xl">${budgetUsage.toLocaleString("en-US")} <span className="text-xs text-white/40">/ $10,000</span></p>
+              <div className="flex items-center justify-between gap-2"><p className="text-[10px] text-white/45 lg:text-xs">Tagesbudget</p><span className="flex items-center gap-1 text-[9px] text-emerald-300/75"><span className="size-1.5 rounded-full bg-emerald-300 animate-pulse" />Live</span></div>
+              <p className="mt-1 text-lg font-light tracking-tight text-white lg:text-xl">{budgetUsage.toLocaleString("de-DE")} € <span className="text-xs text-white/40">/ 10.000 €</span></p>
               <Progress value={budgetPercentage} className="mt-2 h-1.5 bg-white/[0.12] after:pointer-events-none after:absolute after:inset-y-0 after:w-8 after:bg-gradient-to-r after:from-transparent after:via-white/70 after:to-transparent after:animate-[budget-meter-scan_5.6s_ease-in-out_infinite] [&>[data-slot=progress-indicator]]:bg-[linear-gradient(90deg,#575b61_0%,#d7dbe0_45%,#727780_100%)] [&>[data-slot=progress-indicator]]:shadow-[0_0_7px_rgba(255,255,255,0.25)]" />
-              <p className="mt-1.5 text-[9px] text-white/40 lg:text-[10px]">{budgetPercentage.toFixed(1)}% allocated across active runs</p>
+              <p className="mt-1.5 text-[9px] text-white/40 lg:text-[10px]">{budgetPercentage.toFixed(1)} % zugewiesen auf aktive Läufe</p>
             </div>
           </div>
         </div>
         <div className="grid min-h-0 grid-cols-[1fr_1.02fr] gap-3 lg:gap-4">
           <Card className="insights-gradient-border min-h-0 gap-0 rounded-lg py-0 shadow-none">
-            <CardHeader className="px-4 py-4 lg:px-5"><CardTitle className="text-xs font-normal text-white/55 lg:text-sm">Agent tasks per assignee</CardTitle></CardHeader>
+            <CardHeader className="px-4 py-4 lg:px-5"><CardTitle className="text-xs font-normal text-white/55 lg:text-sm">Agentenaufgaben pro Verantwortlichem</CardTitle></CardHeader>
             <CardContent className="relative min-h-0 flex-1 px-4 pb-4 lg:px-5 lg:pb-5">
               <div className="absolute inset-x-4 top-3 bottom-12 flex flex-col justify-between lg:left-5 lg:right-[1.875rem] lg:top-4 lg:bottom-14">
                 {["180", "160", "140", "120", "100", "80", "60", "40", "20", "0"].map((mark) => <div key={mark} className="relative border-t border-dashed border-white/[0.09]"><span className="absolute -right-5 -top-2 text-[8px] text-white/35 lg:text-[10px]">{mark}</span></div>)}
@@ -232,7 +232,7 @@ function AgentInsightsDashboard() {
             </CardContent>
           </Card>
           <Card className="insights-gradient-border min-h-0 gap-0 overflow-hidden rounded-lg py-0 shadow-none">
-            <CardHeader className="border-b border-white/[0.06] px-4 py-4 lg:px-5"><CardTitle className="text-xs font-normal text-white/55 lg:text-sm">Projects agents are working on</CardTitle></CardHeader>
+            <CardHeader className="border-b border-white/[0.06] px-4 py-4 lg:px-5"><CardTitle className="text-xs font-normal text-white/55 lg:text-sm">Projekte, an denen Agenten arbeiten</CardTitle></CardHeader>
             <CardContent className="min-h-0 overflow-hidden px-0 pb-0">
               <Table className="table-fixed text-[9px] lg:text-xs">
                 <colgroup><col className="w-[38%]" /><col className="w-[14%]" /><col className="w-[16%]" /><col className="w-[16%]" /><col className="w-[16%]" /></colgroup>
@@ -257,10 +257,10 @@ export function AgentSchedulerScreen() {
 
 function TeamOrbitVisual() {
   const roles = [
-    { title: "Software Engineer", side: "left", tone: "text-cyan-300", icon: "⌁" },
+    { title: "Softwareentwickler", side: "left", tone: "text-cyan-300", icon: "⌁" },
     { title: "Data Scientist", side: "right", tone: "text-cyan-300", icon: "◒" },
-    { title: "Product Manager", side: "left", tone: "text-violet-300", icon: "⌘" },
-    { title: "UX/UI Designer", side: "right", tone: "text-violet-300", icon: "⌂" },
+    { title: "Produktmanager", side: "left", tone: "text-violet-300", icon: "⌘" },
+    { title: "UX/UI-Designer", side: "right", tone: "text-violet-300", icon: "⌂" },
   ];
 
   return (

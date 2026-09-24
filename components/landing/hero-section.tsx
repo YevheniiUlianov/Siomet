@@ -64,10 +64,11 @@ export function HeroSection() {
             type="button"
             variant="outline"
             className="relative isolate h-10 overflow-hidden rounded-full border-white/30 bg-white px-5 text-black hover:bg-white hover:text-black"
+            onClick={() => document.getElementById("loslegen")?.scrollIntoView({ behavior: "smooth" })}
           >
             <span aria-hidden="true" className="pointer-events-none absolute left-[1.125rem] top-0 h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-neutral-950/0 via-neutral-500 to-neutral-950/0" />
             <span className="relative z-10">
-              REQUEST A DEMO
+              DEMO ANFORDERN
             </span>
           </Button>
         </div>

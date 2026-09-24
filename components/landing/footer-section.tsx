@@ -1,18 +1,18 @@
 "use client";
 
 const footerLinks = {
-  Company: [
+  Unternehmen: [
     { name: "Unsere Prinzipien", href: "#how-it-works" },
     { name: "Team", href: "#insights" },
     { name: "Über uns", href: "#pricing" },
     { name: "Produkte", href: "#products" },
     { name: "Projekte", href: "#projects" },
-    { name: "Customer stories", href: "#customers" },
+    { name: "Kundengeschichten", href: "#customers" },
   ],
-  Legal: [
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
-    { name: "Security", href: "#security" },
+  Rechtliches: [
+    { name: "Datenschutz", href: "#" },
+    { name: "AGBs", href: "#" },
+    { name: "Sicherheit", href: "#security" },
   ],
 };
 
@@ -52,7 +52,7 @@ export function FooterSection() {
             <div className="grid grid-cols-2 gap-10 sm:gap-14">
               {Object.entries(footerLinks).map(([title, links]) => (
                 <div key={title}>
-                  <h3 className="mb-6 text-sm font-medium text-[lab(47.8726%_0.0583529_5.78918)]">{title}</h3>
+                  <h3 className="mb-6 text-sm font-medium text-white">{title}</h3>
                   <ul className="space-y-4">
                     {links.map((link) => (
                       <li key={link.name}>
@@ -74,13 +74,13 @@ export function FooterSection() {
         {/* Bottom Bar */}
         <div className="flex flex-col items-start justify-between gap-4 border-t border-white/10 py-8 md:flex-row md:items-center">
           <p className="text-sm text-[lab(47.8726%_0.0583529_5.78918)]">
-            &copy; 2026 Siomet. All rights reserved.
+            &copy; 2026 Siomet. Alle Rechte vorbehalten.
           </p>
 
           <div className="flex items-center gap-4 text-sm text-[lab(47.8726%_0.0583529_5.78918)]">
             <span className="flex items-center gap-2">
               <span className="size-2 rounded-full bg-emerald-400" />
-              All scheduler systems operational
+              Alle Scheduler-Systeme betriebsbereit
             </span>
           </div>
         </div>

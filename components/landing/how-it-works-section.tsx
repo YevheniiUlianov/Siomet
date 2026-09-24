@@ -1,6 +1,6 @@
 "use client";
 
-import { type CSSProperties, useEffect, useRef, useState } from "react";
+import { Fragment, type CSSProperties, useEffect, useRef, useState } from "react";
 import { AgentInboxPanel } from "@/components/ui/agent-inbox-panel";
 import { FlexibleSchedulingPanel } from "@/components/ui/flexible-scheduling-panel";
 import { GuardrailsControlPanel } from "@/components/ui/guardrails-control-panel";
@@ -115,9 +115,8 @@ export function HowItWorksSection() {
           }`}
         >
           {triggerFeatures.map((feature, index) => (
-            <>
+            <Fragment key={feature.title}>
               <article
-                key={feature.title}
                 className={`group relative flex min-h-[620px] flex-col overflow-hidden px-[15px] py-5 lg:p-10 ${
                   index < 2 ? "border-b border-white/[0.12]" : ""
                 } ${index % 2 === 0 ? "md:border-r md:border-white/[0.12]" : ""} ${
@@ -386,7 +385,7 @@ export function HowItWorksSection() {
                 <span aria-hidden="true" className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-slate-300/0 via-slate-200/90 to-slate-300/0 transition-all duration-500 group-hover:w-full" />
               </article>
               {index === 3 ? <div className="col-span-full h-px bg-[#2a2d31]" /> : null}
-            </>
+            </Fragment>
           ))}
         </div>
       </div>

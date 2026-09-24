@@ -1,4 +1,4 @@
-import { ArrowUpRight, Boxes, CircleCheck, Gauge, ShieldCheck } from "lucide-react";
+import { Boxes, CircleCheck, Gauge, ShieldCheck } from "lucide-react";
 import { SectionLabel } from "@/components/ui/section-label";
 
 const productSignals = [
@@ -29,8 +29,8 @@ export function ProductsSection() {
             <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
               <div className="flex flex-col justify-between border-b border-white/10 p-6 sm:p-8 lg:border-r lg:border-b-0 lg:p-10">
                 <div>
-                  <div className="flex items-center gap-2 text-2xl font-semibold tracking-[-0.04em] text-foreground">
-                    <span>Qro</span><span className="text-orange-400">nos</span>
+                  <div className="flex items-center gap-0 text-2xl font-bold tracking-[-0.04em] text-foreground">
+                    <span>Praxi</span><span className="text-[#ff704d]">Gate</span>
                   </div>
                   <p className="mt-5 max-w-sm text-xl leading-snug text-foreground/90">
                     Agentensysteme, die mitdenken. Und mit Ihnen wachsen.
@@ -39,13 +39,6 @@ export function ProductsSection() {
                     Qronos orchestriert wiederkehrende Aufgaben, erkennt Engpässe und hält jedes Team im gleichen Takt.
                   </p>
                 </div>
-                <a
-                  href="#features"
-                  className="mt-10 inline-flex w-fit items-center gap-3 border border-white/20 px-4 py-3 text-xs uppercase tracking-[0.18em] text-foreground transition-colors hover:border-orange-400/70 hover:text-orange-300"
-                >
-                  Mehr erfahren
-                  <ArrowUpRight aria-hidden="true" size={15} />
-                </a>
               </div>
 
               <div className="relative min-h-[360px] overflow-hidden p-5 sm:p-8 lg:min-h-[430px] lg:p-10">

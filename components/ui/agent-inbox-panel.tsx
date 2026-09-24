@@ -22,43 +22,43 @@ import { Separator } from "@/components/ui/separator";
 const inboxItems = [
   {
     initials: "RA",
-    title: "Research brief ready",
-    description: "Research agent completed the competitor scan",
+    title: "Forschungsbrief fertig",
+    description: "Der Research-Agent hat den Wettbewerbscheck abgeschlossen",
     time: "8m",
     tone: "cyan",
     status: "complete",
     avatarSrc: "/images/agent-logos/gemini.png",
-    avatarAlt: "Gemini logo",
+    avatarAlt: "Gemini-Logo",
   },
   {
     initials: "SA",
-    title: "Approval required",
-    description: "Support agent wants to issue a refund",
+    title: "Freigabe erforderlich",
+    description: "Der Support-Agent möchte eine Rückerstattung auslösen",
     time: "1h",
     tone: "yellow",
     status: "approval",
     avatarSrc: "/images/agent-logos/codex.png",
-    avatarAlt: "Codex logo",
+    avatarAlt: "Codex-Logo",
   },
   {
     initials: "FA",
-    title: "Budget threshold reached",
-    description: "Finance agent paused the nightly run",
+    title: "Budgetgrenze erreicht",
+    description: "Der Finance-Agent hat den Nachtlauf pausiert",
     time: "4h",
     tone: "red",
     status: "attention",
     avatarSrc: "/images/agent-logos/claude.png",
-    avatarAlt: "Claude logo",
+    avatarAlt: "Claude-Logo",
   },
   {
     initials: "OA",
-    title: "Memory sync complete",
-    description: "Ops agent saved context for its next wake-up",
+    title: "Speichersynchronisierung abgeschlossen",
+    description: "Der Ops-Agent hat den Kontext für den nächsten Weckvorgang gespeichert",
     time: "1d",
     tone: "emerald",
     status: "complete",
     avatarSrc: "/images/agent-logos/claude.png",
-    avatarAlt: "Claude logo",
+    avatarAlt: "Claude-Logo",
   },
 ] as const;
 
@@ -94,7 +94,7 @@ export function AgentInboxPanel() {
     <Card className="gap-0 overflow-hidden rounded-xl border-white/[0.09] bg-[linear-gradient(145deg,rgba(19,19,21,0.98),rgba(7,7,8,0.98))] py-0 shadow-none">
       <CardHeader className="flex min-h-16 grid-cols-[1fr_auto] items-center gap-4 px-5 py-4">
         <div className="flex items-center gap-2.5">
-          <CardTitle className="text-base font-medium text-white/90">Inbox</CardTitle>
+          <CardTitle className="text-base font-medium text-white/90">Posteingang</CardTitle>
           <Ellipsis aria-hidden="true" className="size-4 text-white/35" />
         </div>
         <CardAction className="relative col-start-auto row-span-1 row-start-auto ml-auto flex items-center gap-1 self-auto justify-self-auto text-muted-foreground">

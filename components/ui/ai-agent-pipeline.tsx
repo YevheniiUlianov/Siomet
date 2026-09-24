@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const messages = [
-  'Received: "Prepare the daily operations brief..."',
-  "Planner assigned research, support, and finance agents",
-  "Shared memory restored: tools, notes, and prior run state loaded",
-  "Research agent: source scan complete, confidence 0.92",
-  "Support agent: queue triaged, two follow-ups prepared",
-  "Finance agent: spend check passed, execution approved",
-  "Pipeline complete. 3 agent handoffs recorded in 342ms.",
-  "Idle. Listening for the next agent trigger...",
+  'Eingang: "Bereite den täglichen Betriebsüberblick vor..."',
+  "Planner hat Research-, Support- und Finanz-Agenten zugewiesen",
+  "Gemeinsamer Speicher wiederhergestellt: Tools, Notizen und vorheriger Laufzustand geladen",
+  "Research-Agent: Quellenscan abgeschlossen, Vertrauen 0,92",
+  "Support-Agent: Warteschlange sortiert, zwei Follow-ups vorbereitet",
+  "Finance-Agent: Ausgabenprüfung bestanden, Ausführung genehmigt",
+  "Pipeline abgeschlossen. 3 Agenten-Übergaben in 342 ms aufgezeichnet.",
+  "Bereit. Lauscht auf den nächsten Agenten-Trigger...",
 ];
 
 function AnimatedDot({ path, duration, delay, size, opacity }: { path: string; duration: number; delay: number; size: number; opacity: number }) {
@@ -48,9 +48,9 @@ export function AIAgentPipeline() {
       <div className="flex items-center justify-between border-b border-white/[0.06] px-[18px] py-[11px]">
         <div className="flex items-center gap-[7px]">
           <motion.span className="inline-block size-[6px] rounded-full bg-green-500" animate={{ opacity: [1, 0.2, 1] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }} />
-          <span className="font-mono text-[10px] tracking-[0.1em] text-white/30">MULTI-AGENT PIPELINE · LIVE</span>
+          <span className="font-mono text-[10px] tracking-[0.1em] text-white/30">MEHRAGENTEN-PIPELINE · AKTIV</span>
         </div>
-        <span className="font-mono text-[10px] text-white/[0.18]">3 agents · 0 errors</span>
+        <span className="font-mono text-[10px] text-white/[0.18]">3 Agenten · 0 Fehler</span>
       </div>
 
       <svg width="100%" viewBox="0 0 580 172" className="block" aria-label="Animated multi-agent workflow">
@@ -81,31 +81,31 @@ export function AIAgentPipeline() {
 
         <rect x="16" y="66" width="100" height="44" rx="8" fill="#141414" stroke={nodeStroke} strokeWidth="0.5" />
         <text x="66" y="83" textAnchor="middle" fontSize="9.5" fill="rgba(255,255,255,0.28)" fontFamily="system-ui" letterSpacing=".07em">TRIGGER</text>
-        <text x="66" y="100" textAnchor="middle" fontSize="12" fill="rgba(255,255,255,0.82)" fontFamily="system-ui">Daily brief</text>
+        <text x="66" y="100" textAnchor="middle" fontSize="12" fill="rgba(255,255,255,0.82)" fontFamily="system-ui">Täglicher Überblick</text>
         <text x="66" y="122" textAnchor="middle" fontSize="8.5" fill="rgba(255,255,255,0.18)" fontFamily="monospace">cron · webhook</text>
 
         <rect x="158" y="66" width="110" height="44" rx="8" fill="#141414" stroke={nodeStroke} strokeWidth="0.5" />
         <text x="213" y="83" textAnchor="middle" fontSize="9.5" fill="rgba(255,255,255,0.28)" fontFamily="system-ui" letterSpacing=".07em">SHARED CONTEXT</text>
-        <text x="213" y="100" textAnchor="middle" fontSize="12" fill="rgba(255,255,255,0.82)" fontFamily="system-ui">Memory loaded</text>
-        <text x="213" y="122" textAnchor="middle" fontSize="8.5" fill="rgba(255,255,255,0.18)" fontFamily="monospace">tools + history</text>
+        <text x="213" y="100" textAnchor="middle" fontSize="12" fill="rgba(255,255,255,0.82)" fontFamily="system-ui">Speicher geladen</text>
+        <text x="213" y="122" textAnchor="middle" fontSize="8.5" fill="rgba(255,255,255,0.18)" fontFamily="monospace">Tools + Verlauf</text>
 
         <rect x="306" y="53" width="105" height="70" rx="10" fill="#000" stroke="url(#qronos-orchestrator-silver)" strokeWidth="2" />
         <text x="358" y="78" textAnchor="middle" fontSize="9.5" fill="rgba(138,180,255,0.9)" fontFamily="system-ui" letterSpacing=".07em">ORCHESTRATOR</text>
-        <text x="358" y="97" textAnchor="middle" fontSize="13" fill="#fff" fontFamily="system-ui" fontWeight="500">Routing work</text>
+        <text x="358" y="97" textAnchor="middle" fontSize="13" fill="#fff" fontFamily="system-ui" fontWeight="500">Arbeit verteilt</text>
         <PulsingDot cx={346} cy={113} color="url(#qronos-agent-pipeline-silver)" duration={1.2} /><PulsingDot cx={358} cy={113} color="url(#qronos-agent-pipeline-silver)" duration={1.2} delay={0.4} /><PulsingDot cx={370} cy={113} color="url(#qronos-agent-pipeline-silver)" duration={1.2} delay={0.8} />
-        <text x="358" y="139" textAnchor="middle" fontSize="8.5" fill="rgba(138,180,255,0.8)" fontFamily="monospace">handoffs active</text>
+        <text x="358" y="139" textAnchor="middle" fontSize="8.5" fill="rgba(138,180,255,0.8)" fontFamily="monospace">Übergaben aktiv</text>
 
-        <rect x="448" y="35" width="116" height="30" rx="7" fill="#111" stroke="rgba(255,255,255,0.07)" strokeWidth="0.5" /><text x="490" y="53.5" textAnchor="middle" fontSize="11" fill="rgba(255,255,255,0.62)" fontFamily="system-ui">Research agent</text><StatusIndicator cx={550} cy={43} color="#22c55e" />
-        <rect x="448" y="73" width="116" height="30" rx="7" fill="#111" stroke="rgba(255,255,255,0.07)" strokeWidth="0.5" /><text x="490" y="91.5" textAnchor="middle" fontSize="11" fill="rgba(255,255,255,0.62)" fontFamily="system-ui">Support agent</text><StatusIndicator cx={550} cy={81} color="#f59e0b" pulsing duration={1.9} />
-        <rect x="448" y="111" width="116" height="30" rx="7" fill="#111" stroke="rgba(255,255,255,0.07)" strokeWidth="0.5" /><text x="490" y="129.5" textAnchor="middle" fontSize="11" fill="rgba(255,255,255,0.62)" fontFamily="system-ui">Finance agent</text><StatusIndicator cx={550} cy={119} color="#f59e0b" pulsing duration={2.2} delay={0.35} />
+        <rect x="448" y="35" width="116" height="30" rx="7" fill="#111" stroke="rgba(255,255,255,0.07)" strokeWidth="0.5" /><text x="490" y="53.5" textAnchor="middle" fontSize="11" fill="rgba(255,255,255,0.62)" fontFamily="system-ui">Research-Agent</text><StatusIndicator cx={550} cy={43} color="#22c55e" />
+        <rect x="448" y="73" width="116" height="30" rx="7" fill="#111" stroke="rgba(255,255,255,0.07)" strokeWidth="0.5" /><text x="490" y="91.5" textAnchor="middle" fontSize="11" fill="rgba(255,255,255,0.62)" fontFamily="system-ui">Support-Agent</text><StatusIndicator cx={550} cy={81} color="#f59e0b" pulsing duration={1.9} />
+        <rect x="448" y="111" width="116" height="30" rx="7" fill="#111" stroke="rgba(255,255,255,0.07)" strokeWidth="0.5" /><text x="490" y="129.5" textAnchor="middle" fontSize="11" fill="rgba(255,255,255,0.62)" fontFamily="system-ui">Finance-Agent</text><StatusIndicator cx={550} cy={119} color="#f59e0b" pulsing duration={2.2} delay={0.35} />
       </svg>
 
       <div className="h-[52px] border-t border-white/[0.06] px-[18px] py-[9px]"><div className="flex h-full items-start gap-2"><span className="shrink-0 font-mono text-[13px] leading-[1.5] text-[#8ab4ff]/80">›</span><div className="relative h-full flex-1 overflow-hidden"><AnimatePresence mode="wait"><motion.div key={messageIndex} initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -5 }} transition={{ duration: 0.25 }} className="absolute inset-0 font-mono text-[11px] leading-[1.55] text-white/[0.42]">{messages[messageIndex]}</motion.div></AnimatePresence></div></div></div>
       <div className="flex items-center gap-[22px] border-t border-white/[0.06] px-[18px] py-[10px]">
-        <div><div className="mb-[3px] text-[9px] tracking-[0.09em] text-white/20">RUNS TODAY</div><motion.div key={runs} initial={{ scale: 1.05 }} animate={{ scale: 1 }} className="font-mono text-[16px] text-white/[0.72]">{new Intl.NumberFormat("en-US").format(runs)}</motion.div></div>
-        <div><div className="mb-[3px] text-[9px] tracking-[0.09em] text-white/20">SUCCESS</div><div className="font-mono text-[16px] text-white/[0.72]">99.9%</div></div>
-        <div><div className="mb-[3px] text-[9px] tracking-[0.09em] text-white/20">HANDOFFS</div><div className="font-mono text-[16px] text-white/[0.72]">342ms</div></div>
-        <div className="ml-auto text-right"><div className="mb-[3px] text-[9px] tracking-[0.09em] text-white/[0.18]">RUNTIME</div><div className="font-mono text-[10px] text-[#8ab4ff]/80">Qronos mesh</div></div>
+        <div><div className="mb-[3px] text-[9px] tracking-[0.09em] text-white/20">LÄUFE HEUTE</div><motion.div key={runs} initial={{ scale: 1.05 }} animate={{ scale: 1 }} className="font-mono text-[16px] text-white/[0.72]">{new Intl.NumberFormat("de-DE").format(runs)}</motion.div></div>
+        <div><div className="mb-[3px] text-[9px] tracking-[0.09em] text-white/20">ERFOLG</div><div className="font-mono text-[16px] text-white/[0.72]">99,9 %</div></div>
+        <div><div className="mb-[3px] text-[9px] tracking-[0.09em] text-white/20">ÜBERGABEN</div><div className="font-mono text-[16px] text-white/[0.72]">342 ms</div></div>
+        <div className="ml-auto text-right"><div className="mb-[3px] text-[9px] tracking-[0.09em] text-white/[0.18]">LAUFZEIT</div><div className="font-mono text-[10px] text-[#8ab4ff]/80">Qronos mesh</div></div>
       </div>
     </div>
   );

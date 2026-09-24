@@ -13,47 +13,47 @@ import {
 type Item = { id: string; label: string; hint: string; value: string };
 
 const POLICY_MODES = [
-  { value: "off", label: "Off" },
-  { value: "monitor", label: "Monitor" },
-  { value: "enforce", label: "Enforce" },
-  { value: "approval", label: "Require approval" },
+  { value: "off", label: "Aus" },
+  { value: "monitor", label: "Überwachen" },
+  { value: "enforce", label: "Durchsetzen" },
+  { value: "approval", label: "Freigabe erforderlich" },
 ];
 
 const INITIAL: Item[] = [
   {
     id: "budget",
-    label: "Daily API budget",
-    hint: "Prevent runaway model spend",
+    label: "Tägliches API-Budget",
+    hint: "Verhindert unkontrollierten Modellaufwand",
     value: "enforce",
   },
   {
     id: "timeout",
-    label: "Run timeout",
-    hint: "Stop stalled agent jobs",
+    label: "Laufzeitbegrenzung",
+    hint: "Stoppt blockierte Agentenjobs",
     value: "enforce",
   },
   {
     id: "tools",
-    label: "Sensitive tools",
-    hint: "Hold destructive actions",
+    label: "Sensible Tools",
+    hint: "Verhindert destruktive Aktionen",
     value: "approval",
   },
   {
     id: "retries",
-    label: "Failure retries",
-    hint: "End repeated error loops",
+    label: "Fehlerwiederholungen",
+    hint: "Beendet wiederholte Fehler-Schleifen",
     value: "monitor",
   },
   {
     id: "concurrency",
-    label: "Concurrency limits",
-    hint: "Prevent overlapping agent runs",
+    label: "Parallelitätsgrenzen",
+    hint: "Verhindert überlappende Agentenläufe",
     value: "enforce",
   },
   {
     id: "tool-access",
-    label: "Tool access",
-    hint: "Restrict agents to approved tools",
+    label: "Tool-Zugriff",
+    hint: "Beschränkt Agenten auf freigegebene Tools",
     value: "approval",
   },
 ];

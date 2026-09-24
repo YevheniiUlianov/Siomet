@@ -32,7 +32,7 @@ export interface CustomerStoryCase {
   quote: React.ReactNode;
   author: CustomerStoryAuthor;
   /** Two metrics shown inside the same frame, below the testimonial. Omit to hide. */
-  metrics?: [CustomerStoryMetric, CustomerStoryMetric];
+  metrics?: readonly [CustomerStoryMetric, CustomerStoryMetric];
 }
 
 export interface CustomerStoryStackProps {

@@ -9,11 +9,11 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Unsere Prinzipien", href: "#how-it-works" },
-  { name: "Team",             href: "#insights"     },
-  { name: "Über uns",         href: "#pricing"      },
-  { name: "Produkte",         href: "#products"     },
-  { name: "Projekte",         href: "#projects"     },
-  { name: "Customer stories", href: "#customers"    },
+  { name: "Team", href: "#insights" },
+  { name: "Über uns", href: "#pricing" },
+  { name: "Produkte", href: "#products" },
+  { name: "Projekte", href: "#projects" },
+  { name: "Kundengeschichten", href: "#customers" },
 ];
 
 export function Navigation() {
@@ -66,9 +66,9 @@ export function Navigation() {
             <StarButton
               backgroundColor="#000000"
               className="h-8 border border-slate-200/50 px-4 text-xs"
-              onClick={() => document.querySelector("#features")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => document.querySelector("#loslegen")?.scrollIntoView({ behavior: "smooth" })}
             >
-              GET STARTED
+              LOSLEGEN
               <HugeiconsIcon icon={ArrowRightDoubleIcon} aria-hidden="true" size={14} strokeWidth={1.8} />
             </StarButton>
           </div>
@@ -131,9 +131,9 @@ export function Navigation() {
           style={{ transitionDelay: isMobileMenuOpen ? "300ms" : "0ms" }}
           >
             <Button asChild variant="outline" className="relative isolate h-10 overflow-hidden rounded-full border-white/30 bg-white px-5 text-black hover:bg-white hover:text-black">
-              <a href="#features">
+              <a href="#loslegen">
                 <span aria-hidden="true" className="pointer-events-none absolute left-[1.125rem] top-0 h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-neutral-950/0 via-neutral-500 to-neutral-950/0" />
-                <span className="relative z-10">GET STARTED <HugeiconsIcon icon={ArrowRightDoubleIcon} aria-hidden="true" size={14} strokeWidth={1.8} className="ml-1 inline-block align-[-2px]" /></span>
+                <span className="relative z-10">LOSLEGEN <HugeiconsIcon icon={ArrowRightDoubleIcon} aria-hidden="true" size={14} strokeWidth={1.8} className="ml-1 inline-block align-[-2px]" /></span>
               </a>
             </Button>
           </div>

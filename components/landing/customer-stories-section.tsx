@@ -7,21 +7,21 @@ const operationsStories = [
   {
     id: "meridian-research",
     logo: <img src="/images/testimonial-logos/meridian.png" alt="Meridian" className="h-6 w-auto object-contain" />,
-    quote: "Qronos gave our research agents a dependable rhythm. Every brief starts with the context and tools from the run before it.",
+    quote: "Qronos gab unseren Research-Agenten einen verlässlichen Rhythmus. Jeder Brief beginnt mit dem Kontext und den Tools aus dem vorherigen Lauf.",
     author: { name: "Moustachia Balding", role: "CTO, Meridian Labs", avatarUrl: "/images/testimonials/moustachia-balding.png" },
     metrics: [
-      { icon: <HugeiconsIcon icon={TimeScheduleIcon} />, label: "80% of recurring intelligence automated" },
-      { icon: <HugeiconsIcon icon={Activity03Icon} />, label: "One durable run history for every agent" },
+      { icon: <HugeiconsIcon icon={TimeScheduleIcon} />, label: "80 % der wiederkehrenden Analysen automatisiert" },
+      { icon: <HugeiconsIcon icon={Activity03Icon} />, label: "Eine dauerhafte Laufhistorie für jeden Agenten" },
     ] as const,
   },
   {
     id: "beacon-operations",
     logo: <img src="/images/testimonial-logos/monolyth.png" alt="Monolyth" className="h-6 w-auto object-contain" />,
-    quote: "We replaced brittle polling jobs with agents that wake on real signals, follow through, and stay inside the budget we set.",
+    quote: "Wir ersetzten fragile Polling-Jobs durch Agenten, die auf echte Signale reagieren, durchhalten und im gesetzten Budget bleiben.",
     author: { name: "Dani Raulisa", role: "VP Engineering, Monolyth Dev", avatarUrl: "/images/testimonials/dani-raulisa.png" },
     metrics: [
-      { icon: <HugeiconsIcon icon={Activity03Icon} />, label: "10× faster response to customer events" },
-      { icon: <HugeiconsIcon icon={TimeScheduleIcon} />, label: "0 missed handoffs across active workflows" },
+      { icon: <HugeiconsIcon icon={Activity03Icon} />, label: "10× schnellere Reaktion auf Kundensignale" },
+      { icon: <HugeiconsIcon icon={TimeScheduleIcon} />, label: "0 verpasste Übergaben in aktiven Workflows" },
     ] as const,
   },
 ];
@@ -33,14 +33,14 @@ export function CustomerStoriesSection() {
         <div className="relative mx-0 lg:mx-5">
           <div className="grid items-end gap-8 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <SectionLabel>Customer stories</SectionLabel>
+              <SectionLabel>Kundengeschichten</SectionLabel>
               <h2 className="font-display text-[37px] leading-[0.95] tracking-tight lg:text-[48px]">
-                <span className="block text-foreground">Teams moving faster</span>
-                <span className="mt-1 block text-muted-foreground lg:mt-3">with autonomous work.</span>
+                <span className="block text-foreground">Teams, die schneller werden</span>
+                <span className="mt-1 block text-muted-foreground lg:mt-3">mit autonomer Arbeit.</span>
               </h2>
             </div>
             <p className="text-xl leading-relaxed text-muted-foreground lg:col-span-5 lg:pb-4">
-              See how operations teams turn recurring work into agent-led systems that stay responsive, governed, and in context.
+              Sehen Sie, wie Operations-Teams wiederkehrende Aufgaben in agentengesteuerte Systeme verwandeln, die agil, kontrollierbar und kontextbezogen bleiben.
             </p>
           </div>
 
