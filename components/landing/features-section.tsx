@@ -258,23 +258,26 @@ export function AgentSchedulerScreen() {
 function TeamOrbitVisual() {
   const roles = [
     { title: "Softwareentwickler", side: "left", tone: "text-cyan-300", icon: "⌁" },
-    { title: "Data Scientist", side: "right", tone: "text-cyan-300", icon: "◒" },
+    { title: "Data Scientist", side: "right", tone: "text-emerald-300", icon: "◒" },
     { title: "Produktmanager", side: "left", tone: "text-violet-300", icon: "⌘" },
-    { title: "UX/UI-Designer", side: "right", tone: "text-violet-300", icon: "⌂" },
+    { title: "UX/UI-Designer", side: "right", tone: "text-rose-300", icon: "⌂" },
   ];
 
   return (
     <div className="relative h-full overflow-hidden px-5 py-8 text-white sm:px-8 lg:px-12 lg:py-10">
       <svg aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-[36%] h-[42%] w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M 7 20 H 29 L 40 40 M 93 20 H 71 L 60 40 M 7 80 H 29 L 40 60 M 93 80 H 71 L 60 60" fill="none" stroke="rgba(105,166,197,0.34)" strokeWidth="0.55" />
+        <path d="M 7 20 H 29 L 40 40" fill="none" stroke="#67e8f9" strokeOpacity="0.4" strokeWidth="0.55" />
+        <path d="M 93 20 H 71 L 60 40" fill="none" stroke="#6ee7b7" strokeOpacity="0.4" strokeWidth="0.55" />
+        <path d="M 7 80 H 29 L 40 60" fill="none" stroke="#c4b5fd" strokeOpacity="0.4" strokeWidth="0.55" />
+        <path d="M 93 80 H 71 L 60 60" fill="none" stroke="#fda4af" strokeOpacity="0.4" strokeWidth="0.55" />
       </svg>
 
       <GlobePulse className="absolute left-1/2 top-[58%] z-10 w-[47%] max-w-[390px] -translate-x-1/2 -translate-y-1/2" />
 
-      <div className="absolute inset-x-0 bottom-[7%] top-[34%] z-20">
-        {roles.map((role, index) => <div key={role.title} className={`absolute flex w-[42%] items-center gap-2 sm:w-[35%] lg:w-[28%] ${role.side === "left" ? "left-[3%] justify-end text-right" : "right-[3%] flex-row-reverse justify-end text-left"} ${index < 2 ? "top-[17%]" : "bottom-[10%]"}`}>
-          <div className="min-w-0"><p className="truncate text-[10px] font-light text-white/90 sm:text-sm lg:text-base">{role.title}</p></div>
-          <span className={`grid size-8 shrink-0 place-items-center rounded-full border border-white/10 bg-[#090e14]/95 text-lg shadow-[0_0_0_5px_rgba(8,14,20,0.55)] sm:size-10 ${role.tone}`}>{role.icon}</span>
+      <div className="absolute inset-0 z-20">
+        {roles.map((role, index) => <div key={role.title} className={`absolute -mt-2 flex w-[42%] -translate-y-1/2 items-center gap-2 sm:w-[35%] lg:w-[28%] ${role.side === "left" ? "left-[3%] justify-end text-right" : "right-[3%] flex-row-reverse justify-end text-left"} ${index < 2 ? "top-[44.4%]" : "top-[69.6%]"}`}>
+          <div className="relative min-w-0 -translate-y-2"><p className={`truncate text-[10px] font-light sm:text-sm lg:text-base ${role.tone}`}>{role.title}</p></div>
+          <span className={`relative -translate-y-2 grid size-8 shrink-0 place-items-center rounded-full border border-white/10 bg-[#090e14]/95 text-lg shadow-[0_0_0_5px_rgba(8,14,20,0.55)] sm:size-10 ${role.tone}`}>{role.icon}</span>
         </div>)}
       </div>
     </div>

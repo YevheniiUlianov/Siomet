@@ -7,6 +7,7 @@ interface PulseMarker {
   id: string
   location: [number, number]
   delay: number
+  color: string
 }
 
 interface GlobePulseProps {
@@ -16,10 +17,10 @@ interface GlobePulseProps {
 }
 
 const defaultMarkers: PulseMarker[] = [
-  { id: "pulse-1", location: [51.51, -0.13], delay: 0 },
-  { id: "pulse-2", location: [40.71, -74.01], delay: 0.5 },
-  { id: "pulse-3", location: [35.68, 139.65], delay: 1 },
-  { id: "pulse-4", location: [-33.87, 151.21], delay: 1.5 },
+  { id: "pulse-1", location: [51.51, -0.13], delay: 0, color: "#67e8f9" },
+  { id: "pulse-2", location: [40.71, -74.01], delay: 0.5, color: "#6ee7b7" },
+  { id: "pulse-3", location: [35.68, 139.65], delay: 1, color: "#c4b5fd" },
+  { id: "pulse-4", location: [-33.87, 151.21], delay: 1.5, color: "#fda4af" },
 ]
 
 export function GlobePulse({ markers = defaultMarkers, className = "", speed = 0.003 }: GlobePulseProps) {
@@ -157,9 +158,9 @@ export function GlobePulse({ markers = defaultMarkers, className = "", speed = 0
             transition: "opacity 0.4s, filter 0.4s",
           }}
         >
-          <span style={{ position: "absolute", inset: 0, border: "2px solid #33ccdd", borderRadius: "50%", opacity: 0, animation: `pulse-expand 2s ease-out infinite ${marker.delay}s` }} />
-          <span style={{ position: "absolute", inset: 0, border: "2px solid #33ccdd", borderRadius: "50%", opacity: 0, animation: `pulse-expand 2s ease-out infinite ${marker.delay + 0.5}s` }} />
-          <span style={{ width: 10, height: 10, background: "#33ccdd", borderRadius: "50%", boxShadow: "0 0 0 3px #111, 0 0 0 5px #33ccdd" }} />
+          <span style={{ position: "absolute", inset: 0, border: `2px solid ${marker.color}`, borderRadius: "50%", opacity: 0, animation: `pulse-expand 2s ease-out infinite ${marker.delay}s` }} />
+          <span style={{ position: "absolute", inset: 0, border: `2px solid ${marker.color}`, borderRadius: "50%", opacity: 0, animation: `pulse-expand 2s ease-out infinite ${marker.delay + 0.5}s` }} />
+          <span style={{ width: 10, height: 10, background: marker.color, borderRadius: "50%", boxShadow: `0 0 0 3px #111, 0 0 0 5px ${marker.color}` }} />
         </div>
       ))}
     </div>
