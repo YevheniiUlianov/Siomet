@@ -68,7 +68,7 @@ export function HeroSection() {
           >
             <span aria-hidden="true" className="pointer-events-none absolute left-[1.125rem] top-0 h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-neutral-950/0 via-neutral-500 to-neutral-950/0" />
             <span className="relative z-10">
-              DEMO ANFORDERN
+              KONTAKT
             </span>
           </Button>
         </div>
