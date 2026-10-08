@@ -3,6 +3,17 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { CustomerStoryStack } from "@/components/ruixen/customer-story-stack";
 import { SectionLabel } from "@/components/ui/section-label";
 
+const NexaLogo = () => (
+  <div className="flex items-center gap-3 text-foreground">
+    <div className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-[8px] border border-white/12 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_rgba(255,255,255,0.02)_55%,_transparent_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.18)]">
+      <svg viewBox="0 0 32 32" className="h-5 w-5 text-white" fill="none" aria-hidden="true">
+        <path d="M8 24V8h3.2L18.7 19.7V8H24v16h-3.2L13.3 12.3V24H8Z" fill="currentColor" />
+      </svg>
+    </div>
+    <span className="text-[11px] font-semibold tracking-[0.32em] text-white">NEXA</span>
+  </div>
+);
+
 const operationsStories = [
   {
     id: "meridian-research",
@@ -16,9 +27,9 @@ const operationsStories = [
   },
   {
     id: "beacon-operations",
-    logo: <img src="/images/testimonial-logos/monolyth.png" alt="Monolyth" className="h-6 w-auto object-contain" />,
+    logo: <NexaLogo />,
     quote: "Wir ersetzten fragile Polling-Jobs durch Agenten, die auf echte Signale reagieren, durchhalten und im gesetzten Budget bleiben.",
-    author: { name: "Dani Raulisa", role: "VP Engineering, Monolyth Dev", avatarUrl: "/images/testimonials/dani-raulisa.png" },
+    author: { name: "Dani Raulisa", role: "VP Engineering, NEXA", avatarUrl: "/images/testimonials/dani-raulisa.png" },
     metrics: [
       { icon: <HugeiconsIcon icon={Activity03Icon} />, label: "10× schnellere Reaktion auf Kundensignale" },
       { icon: <HugeiconsIcon icon={TimeScheduleIcon} />, label: "0 verpasste Übergaben in aktiven Workflows" },

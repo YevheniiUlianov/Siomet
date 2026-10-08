@@ -58,7 +58,7 @@ export function ProductsSection() {
                       rel="noreferrer"
                       className="inline-flex items-center gap-2 self-start rounded-md border border-[#a8d9ff]/60 bg-[#a8d9ff]/10 px-4 py-2 text-sm font-medium text-[#cfeeff] transition-colors hover:bg-[#a8d9ff]/20"
                     >
-                      Praxi Gate besuchen
+                      PraxiGate besuchen
                       <span aria-hidden="true">→</span>
                     </a>
                   </div>
@@ -96,7 +96,7 @@ export function ProductsSection() {
                   </div>
                   <div className="absolute left-1/2 top-0 -translate-x-1/2 border border-white/10 bg-[#11141a] px-4 py-3 text-center animate-[float_6.5s_ease-in-out_infinite]">
                     <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Agents</p>
-                    <p className="mt-1 text-sm text-foreground">arbeiten zusammen</p>
+                    <p className="mt-1 text-sm text-foreground">Zusammen arbeiten</p>
                   </div>
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 border border-cyan-300/20 bg-[#11141a] px-4 py-3 text-center animate-[float_7.5s_ease-in-out_infinite]">
                     <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Control</p>

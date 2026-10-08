@@ -124,8 +124,8 @@ export function GuardrailsControlPanel({ variant = "guardrails" }: { variant?: "
   const modes = variant === "instruments" ? INSTRUMENT_MODES : POLICY_MODES;
 
   return (
-    <Card className="border-white/[0.09] bg-[linear-gradient(145deg,rgba(19,19,21,0.98),rgba(7,7,8,0.98))] shadow-none">
-      <CardContent className="flex flex-col gap-5">
+    <Card className={`border-white/[0.09] bg-[linear-gradient(145deg,rgba(19,19,21,0.98),rgba(7,7,8,0.98))] shadow-none ${variant === "instruments" ? "md:flex-1" : ""}`}>
+      <CardContent className={`flex flex-col gap-5 ${variant === "instruments" ? "md:flex-1 md:justify-between" : ""}`}>
         {items.map((item, index) => (
           <div
             key={item.id}

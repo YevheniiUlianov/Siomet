@@ -21,6 +21,8 @@ const defaultMarkers: PulseMarker[] = [
   { id: "pulse-2", location: [40.71, -74.01], delay: 0.5, color: "#6ee7b7" },
   { id: "pulse-3", location: [35.68, 139.65], delay: 1, color: "#c4b5fd" },
   { id: "pulse-4", location: [-33.87, 151.21], delay: 1.5, color: "#fda4af" },
+  { id: "pulse-5", location: [25.2, 55.27], delay: 2, color: "#fcd34d" },
+  { id: "pulse-6", location: [-33.92, 18.42], delay: 2.5, color: "#7dd3fc" },
 ]
 
 export function GlobePulse({ markers = defaultMarkers, className = "", speed = 0.003 }: GlobePulseProps) {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Database, ServerCog } from "lucide-react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Activity02Icon,
@@ -249,7 +249,7 @@ function AgentInsightsDashboard() {
 
 export function AgentSchedulerScreen() {
   return (
-    <div className="relative aspect-[1.05] w-full overflow-hidden lg:aspect-video">
+    <div className="relative aspect-[1.05] w-full overflow-hidden lg:aspect-[2.28/1]">
       <TeamOrbitVisual />
     </div>
   );
@@ -257,25 +257,29 @@ export function AgentSchedulerScreen() {
 
 function TeamOrbitVisual() {
   const roles = [
-    { title: "Softwareentwickler", side: "left", tone: "text-cyan-300", icon: "⌁" },
-    { title: "Data Scientist", side: "right", tone: "text-emerald-300", icon: "◒" },
-    { title: "Produktmanager", side: "left", tone: "text-violet-300", icon: "⌘" },
-    { title: "UX/UI-Designer", side: "right", tone: "text-rose-300", icon: "⌂" },
+    { title: "Softwareentwickler", side: "left", row: "top", tone: "text-cyan-300", icon: "⌁" },
+    { title: "Data Scientist", side: "right", row: "top", tone: "text-emerald-300", icon: "◒" },
+    { title: "Datenbankentwickler", side: "left", row: "middle", tone: "text-amber-300", icon: <Database aria-hidden="true" className="size-4" strokeWidth={1.5} /> },
+    { title: "DevOps", side: "right", row: "middle", tone: "text-sky-300", icon: <ServerCog aria-hidden="true" className="size-4" strokeWidth={1.5} /> },
+    { title: "Produktmanager", side: "left", row: "bottom", tone: "text-violet-300", icon: "⌘" },
+    { title: "UX/UI-Designer", side: "right", row: "bottom", tone: "text-rose-300", icon: "⌂" },
   ];
 
   return (
     <div className="relative h-full overflow-hidden px-5 py-8 text-white sm:px-8 lg:px-12 lg:py-10">
-      <svg aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-[36%] h-[42%] w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M 7 20 H 29 L 40 40" fill="none" stroke="#67e8f9" strokeOpacity="0.4" strokeWidth="0.55" />
-        <path d="M 93 20 H 71 L 60 40" fill="none" stroke="#6ee7b7" strokeOpacity="0.4" strokeWidth="0.55" />
-        <path d="M 7 80 H 29 L 40 60" fill="none" stroke="#c4b5fd" strokeOpacity="0.4" strokeWidth="0.55" />
-        <path d="M 93 80 H 71 L 60 60" fill="none" stroke="#fda4af" strokeOpacity="0.4" strokeWidth="0.55" />
+      <svg aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-[17%] h-[64%] w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M 7 16 H 29 L 40 38" fill="none" stroke="#67e8f9" strokeOpacity="0.4" strokeWidth="0.55" />
+        <path d="M 93 16 H 71 L 60 38" fill="none" stroke="#6ee7b7" strokeOpacity="0.4" strokeWidth="0.55" />
+        <path d="M 7 50 H 29 L 40 50" fill="none" stroke="#fcd34d" strokeOpacity="0.4" strokeWidth="0.55" />
+        <path d="M 93 50 H 71 L 60 50" fill="none" stroke="#7dd3fc" strokeOpacity="0.4" strokeWidth="0.55" />
+        <path d="M 7 84 H 29 L 40 62" fill="none" stroke="#c4b5fd" strokeOpacity="0.4" strokeWidth="0.55" />
+        <path d="M 93 84 H 71 L 60 62" fill="none" stroke="#fda4af" strokeOpacity="0.4" strokeWidth="0.55" />
       </svg>
 
       <GlobePulse className="absolute left-1/2 top-[58%] z-10 w-[47%] max-w-[390px] -translate-x-1/2 -translate-y-1/2" />
 
       <div className="absolute inset-0 z-20">
-        {roles.map((role, index) => <div key={role.title} className={`absolute -mt-2 flex w-[42%] -translate-y-1/2 items-center gap-2 sm:w-[35%] lg:w-[28%] ${role.side === "left" ? "left-[3%] justify-end text-right" : "right-[3%] flex-row-reverse justify-end text-left"} ${index < 2 ? "top-[44.4%]" : "top-[69.6%]"}`}>
+        {roles.map((role) => <div key={role.title} className={`absolute -mt-2 flex w-[42%] -translate-y-1/2 items-center gap-2 sm:w-[35%] lg:w-[28%] ${role.side === "left" ? "left-[3%] justify-end text-right" : "right-[3%] flex-row-reverse justify-end text-left"} ${role.row === "top" ? "top-[28%]" : role.row === "middle" ? "top-[50%]" : "top-[72%]"}`}>
           <div className="relative min-w-0 -translate-y-2"><p className={`truncate text-[10px] font-light sm:text-sm lg:text-base ${role.tone}`}>{role.title}</p></div>
           <span className={`relative -translate-y-2 grid size-8 shrink-0 place-items-center rounded-full border border-white/10 bg-[#090e14]/95 text-lg shadow-[0_0_0_5px_rgba(8,14,20,0.55)] sm:size-10 ${role.tone}`}>{role.icon}</span>
         </div>)}

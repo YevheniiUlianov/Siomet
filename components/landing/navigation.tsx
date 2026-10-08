@@ -68,7 +68,7 @@ export function Navigation() {
               className="h-8 border border-slate-200/50 px-4 text-xs"
               onClick={() => document.querySelector("#loslegen")?.scrollIntoView({ behavior: "smooth" })}
             >
-              LOSLEGEN
+              KONTAKT
               <HugeiconsIcon icon={ArrowRightDoubleIcon} aria-hidden="true" size={14} strokeWidth={1.8} />
             </StarButton>
           </div>
@@ -133,7 +133,7 @@ export function Navigation() {
             <Button asChild variant="outline" className="relative isolate h-10 overflow-hidden rounded-full border-white/30 bg-white px-5 text-black hover:bg-white hover:text-black">
               <a href="#loslegen">
                 <span aria-hidden="true" className="pointer-events-none absolute left-[1.125rem] top-0 h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-neutral-950/0 via-neutral-500 to-neutral-950/0" />
-                <span className="relative z-10">LOSLEGEN <HugeiconsIcon icon={ArrowRightDoubleIcon} aria-hidden="true" size={14} strokeWidth={1.8} className="ml-1 inline-block align-[-2px]" /></span>
+                <span className="relative z-10">KONTAKT <HugeiconsIcon icon={ArrowRightDoubleIcon} aria-hidden="true" size={14} strokeWidth={1.8} className="ml-1 inline-block align-[-2px]" /></span>
               </a>
             </Button>
           </div>

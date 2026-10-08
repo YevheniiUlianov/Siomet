@@ -133,7 +133,7 @@ export function HowItWorksSection() {
                     <p className="mt-3 max-w-md text-base leading-relaxed text-white/50">{feature.description}</p>
                   </div>
                   <div className="flex flex-1 items-center">
-                    <div className="relative w-full overflow-hidden rounded-[14px] border border-white/[0.09] p-[5px] [-webkit-mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)] [mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)]">
+                    <div className="principle-visual relative w-full overflow-hidden rounded-[14px] border border-white/[0.09] p-[5px] [-webkit-mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)] [mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)]">
                       <FlexibleSchedulingPanel />
                       <span aria-hidden="true" className="pointer-events-none absolute left-[1.125rem] top-0 h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-slate-300/0 via-slate-200/90 to-slate-300/0" />
                     </div>
@@ -146,20 +146,21 @@ export function HowItWorksSection() {
                     <p className="mt-3 max-w-md text-base leading-relaxed text-white/50">{feature.description}</p>
                   </div>
                   <div className="flex flex-1 items-center">
-                    <div className="w-full overflow-hidden rounded-[14px] border border-white/[0.09] p-[5px] [-webkit-mask-image:linear-gradient(to_bottom,#000_0%,#000_88%,transparent_100%)] [mask-image:linear-gradient(to_bottom,#000_0%,#000_88%,transparent_100%)]">
+                    <div className="principle-visual relative w-full overflow-hidden rounded-[14px] border border-white/[0.09] p-[5px] [-webkit-mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)] [mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)]">
                       <ProductFocusPanel />
+                      <span aria-hidden="true" className="pointer-events-none absolute left-[1.125rem] top-0 h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-slate-300/0 via-slate-200/90 to-slate-300/0" />
                     </div>
                   </div>
                 </>
               ) : feature.title === "Innovative Instrumente" ? (
                 <>
-                  <div className="mb-5 lg:mb-6">
+                  <div className="mb-5 lg:mb-6 lg:min-h-[9.5rem]">
                     <h3 className="text-2xl font-medium tracking-tight text-white lg:text-3xl">{feature.title}</h3>
                     <p className="mt-3 max-w-md text-base font-medium leading-relaxed text-white/50">{feature.description}</p>
                   </div>
-                  <div className="flex flex-1 items-center">
+                  <div className="flex flex-1 items-start">
                     <div className="relative w-full">
-                      <div className="relative overflow-hidden rounded-[14px] border border-white/[0.09] p-[5px] md:mr-[75px] [-webkit-mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)] [mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)]">
+                      <div className="principle-visual relative flex flex-col overflow-hidden rounded-[14px] border border-white/[0.09] p-[5px] md:mr-[75px] md:min-h-[31.5rem] [-webkit-mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)] [mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)]">
                         <GuardrailsControlPanel variant="instruments" />
                         <span aria-hidden="true" className="pointer-events-none absolute left-[1.125rem] top-0 h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-slate-300/0 via-slate-200/90 to-slate-300/0" />
                       </div>
@@ -280,7 +281,7 @@ export function HowItWorksSection() {
                     <p className="mt-3 max-w-md text-base leading-relaxed text-white/50">{feature.description}</p>
                   </div>
                   <div className="flex flex-1 items-center">
-                    <div className="relative w-full overflow-hidden rounded-[14px] border border-white/[0.09] p-[5px] [-webkit-mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)] [mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)]">
+                    <div className="principle-visual relative w-full overflow-hidden rounded-[14px] border border-white/[0.09] p-[5px] [-webkit-mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)] [mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)]">
                       <QualityControlPanel />
                       <span aria-hidden="true" className="pointer-events-none absolute left-[1.125rem] top-0 h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-slate-300/0 via-slate-200/90 to-slate-300/0" />
                     </div>
@@ -306,8 +307,9 @@ export function HowItWorksSection() {
                     <p className="mt-3 max-w-md text-base leading-relaxed text-white/50">{feature.description}</p>
                   </div>
                   <div className="flex flex-1 items-center">
-                    <div className="w-full overflow-hidden rounded-[14px] border border-white/[0.09] p-[5px]">
+                    <div className="principle-visual relative w-full overflow-hidden rounded-[14px] border border-white/[0.09] p-[5px] [-webkit-mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)] [mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)]">
                       <SecurityDesignPanel />
+                      <span aria-hidden="true" className="pointer-events-none absolute left-[1.125rem] top-0 h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-slate-300/0 via-slate-200/90 to-slate-300/0" />
                     </div>
                     <div className="hidden">
                       <div className="absolute inset-0 bg-[linear-gradient(135deg,transparent_0%,rgba(255,255,255,0.04)_50%,transparent_100%)]" />
@@ -366,12 +368,12 @@ export function HowItWorksSection() {
                 </>
               ) : feature.title === "Immer auf dem neuesten Stand" ? (
                 <>
-                  <div className="mb-5 lg:mb-6">
+                  <div className="mb-5 lg:mb-6 lg:min-h-[9.5rem]">
                     <h3 className="text-2xl font-medium tracking-tight text-white lg:text-3xl">{feature.title}</h3>
                     <p className="mt-3 max-w-md text-base leading-relaxed text-white/50">{feature.description}</p>
                   </div>
-                  <div className="flex flex-1 items-center">
-                    <div className="relative w-full overflow-hidden rounded-[14px] border border-white/[0.09] p-[5px] [-webkit-mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)] [mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)]">
+                  <div className="flex flex-1 items-start">
+                    <div className="principle-visual relative w-full overflow-hidden rounded-[14px] border border-white/[0.09] p-[5px] [-webkit-mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)] [mask-image:linear-gradient(to_bottom,#000_0%,#000_76%,transparent_100%)]">
                       <TechnologyRadarPanel />
                       <span aria-hidden="true" className="pointer-events-none absolute left-[1.125rem] top-0 h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-slate-300/0 via-slate-200/90 to-slate-300/0" />
                     </div>
