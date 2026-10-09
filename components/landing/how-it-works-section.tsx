@@ -86,7 +86,7 @@ export function HowItWorksSection() {
     <section
       id="how-it-works"
       ref={sectionRef}
-      className="relative overflow-hidden py-24 lg:py-32"
+      className="relative overflow-hidden pt-12 pb-24 lg:pt-16 lg:pb-32"
     >
       <div className="relative mx-auto max-w-[1400px] px-[15px] lg:px-14">
         <div className="mx-0 grid items-end gap-8 lg:mx-5 lg:grid-cols-12">

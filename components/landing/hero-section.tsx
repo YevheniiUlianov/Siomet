@@ -19,7 +19,7 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-start overflow-hidden bg-black">
       {/* Interactive Tornado background */}
-      <div className="absolute inset-y-0 left-1/2 z-0 w-full max-w-[1344px] -translate-x-1/2 overflow-hidden sm:w-[calc(100%-2rem)] lg:w-[calc(100%-3.5rem)]">
+      <div className="hero-vortex-visual absolute inset-y-0 left-1/2 z-0 w-full max-w-[1344px] -translate-x-1/2 overflow-hidden sm:w-[calc(100%-2rem)] lg:w-[calc(100%-3.5rem)]">
         {mounted && (
           <Vortex
             background="#000000"
